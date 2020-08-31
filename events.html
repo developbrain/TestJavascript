@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    </head>
+    <body>
+        <h2>JavaScript Example</h2>
+        <p>This example uses the addEventListener() method to attach a click event to a button.</p>
+        <script>
+            document.addEventListener('DOMContentLoaded',() => {
+                if('alert' in window)
+                    console.log('Alert is in window object'); //console.log(location);
+                else
+                    console.log('Alert is NOT in window object');
+
+                if('document' in window)
+                    console.log('document is in window object');
+                else
+                    console.log('document is NOT in window object');
+            });
+            console.log(window);
+            console.log(document);
+
+            //Alert method in Window Object
+            function handleAlert(){
+                const alertVal = window.alert('Alert message');
+                console.log(alertVal);
+            }
+            handleAlert();
+
+            //Prompt method in Window Object
+            function handlePrompt(){
+                const promptVal = window.prompt('Thid is a Prompt', 'Default Prompt');
+                console.log(promptVal);
+            }
+            handlePrompt();
+
+            //Confirm method in Window Object
+            function handleConfirm(){
+                const confirmVal = window.confirm('Confirm message');
+                console.log(confirmVal);
+            }
+            handleConfirm();
+
+            //Result
+                //undefined
+                //null or deafult value or modified value or even empty string ''
+                //false or true
+
+        </script>
+    </body>
+</html> 
